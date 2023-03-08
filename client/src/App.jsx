@@ -1,10 +1,11 @@
 import '../src/css/style.css';
+import Dashboard from './views/Dashboard';
 
 
 function App() {
   return (
-    <div className="bg-color">
-        <h1>bruh</h1>
+    <div>
+      <Dashboard />
     </div>
   );
 }
