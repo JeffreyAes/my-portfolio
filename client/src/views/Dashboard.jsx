@@ -1,18 +1,16 @@
 import About from "../components/About";
 import Header from "../components/Header";
+import Navigation from "../components/Navigation";
 import Skills from "../components/Skills";
 const Dashboard = (props) => {
 
     return (
         <div className="home" id="home">
-            <section className="navigation">
-
-            </section>
+            <Navigation />
             <Header />
             <main>
                 <About />
-                <Skills />
-                
+                <Skills /> 
             </main>
         </div>
     )

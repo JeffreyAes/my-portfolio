@@ -42,10 +42,11 @@
     &:focus {
         color: $color-secondary-dark;
         font-size: $huge-font-size;
+        filter: brightness(0.8);
 
         &:hover {
             box-shadow: none;
-            filter: brightness(0.8);
+            filter: brightness(0.6);
         }
 
         &:active,
