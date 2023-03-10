@@ -1,0 +1,60 @@
+.skills {
+    &__heading {
+        color: $color-white;
+        text-transform: uppercase;
+        backface-visibility: hidden;
+        font-size: $huge-font-size;
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .5);
+        transition: all 1s;
+
+        &:hover {
+            color: $color-primary-light;
+        }
+
+
+        @include respond(phone) {
+            font-size: 5rem;
+        }
+    }
+
+    &__box {
+        padding: 5rem;
+        text-align: center;
+
+        &--img {
+            height: 15rem;
+            width: 15rem;
+            transition: all .5s;
+
+            &:hover {
+                transform: scale(1.5);
+                filter: drop-shadow(3rem 1rem 1rem $color-secondary-dark);
+            }
+
+        }
+
+        &:hover &--img:not(:hover) {
+            transform: scale(.7);
+        }
+
+        &--link {
+
+            &:visited,
+            &:link {
+                text-decoration: none;
+            }
+
+            &:hover {
+                transform: scale(1.5);
+            }
+
+        }
+
+        &:hover &--link:not(:hover) {
+            transform: scale(.1);
+            opacity: .5;
+        }
+    }
+
+
+}

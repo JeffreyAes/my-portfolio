@@ -5,6 +5,7 @@
 
     p {
         a {
+
             &:link,
             &:visited {
                 background-color: $color-grey-light-1;
@@ -13,16 +14,37 @@
                 text-transform: uppercase;
                 display: inline-block;
                 transition: all .2s;
+            }
+
+            &:hover,
+            &:active {
+                color: $color-primary;
+                box-shadow: 0 1rem 2rem rgba($color-black, .4);
+                transform: rotate(5deg) scale(1.3);
+            }
         }
-        &:hover,
-        &:active {
-            color: $color-primary;
-            box-shadow: 0 1rem 2rem rgba($color-black, .4);
-            transform: rotate(5deg) scale(1.3);
-        }
+
+
     }
 
-    
 }
 
+.section-skills {
+    padding: 20rem 0;
+    background-image: linear-gradient(to right bottom,
+            rgba($color-secondary, 0.6),
+            rgba($color-secondary-dark, 0.8));
+    background-size: cover;
+
+    transform: skewY(-7deg);
+    margin-top: -12rem;
+
+    // .section-features *
+    &>* {
+        transform: skewY(7deg);
+    }
+
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
 }
