@@ -22,11 +22,13 @@ ORDER: Base + typography > general layout + grid> page layout > components
   0% {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0);
     transform: translate(6rem, 6rem);
-    opacity: 0; }
+    opacity: 0;
+    filter: blur(2); }
   100% {
     text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5);
     transform: translate(0rem, 0rem);
-    opacity: 1; } }
+    opacity: 1;
+    filter: blur(0); } }
 
 *,
 *::after,
@@ -75,7 +77,7 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 6rem;
-  animation: text-shadow 1s ease-out;
+  animation: text-shadow 3s ease-out;
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5); }
   .heading-primary--main {
     display: block;
@@ -156,6 +158,11 @@ body {
 .u-margin-top-huge {
   margin-top: 10rem !important; }
 
+.border-round {
+  border: 2px solid #ffa200;
+  padding: 5rem;
+  border-radius: 5rem; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -182,12 +189,13 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
-.btn--arrow {
-  color: #0a93a0; }
-  .btn--arrow:hover {
+.btn--arrow, .btn:link, .btn:focus {
+  color: #0a93a0;
+  font-size: 6rem; }
+  .btn--arrow:hover, .btn:link:hover, .btn:focus:hover {
     box-shadow: none;
     filter: brightness(0.8); }
-  .btn--arrow:active, .btn--arrow:focus {
+  .btn--arrow:active, .btn--arrow:focus, .btn:link:active, .btn:link:focus, .btn:focus:active, .btn:focus:focus {
     box-shadow: none;
     transform: translateY(-0.3rem) scale(1.1);
     filter: brightness(0.8); }
@@ -253,7 +261,7 @@ body {
 
 .header {
   height: 85vh;
-  background-image: linear-gradient(to right bottom, rgba(41, 255, 255, 0.8), rgba(10, 147, 160, 0.8));
+  background-image: linear-gradient(to right bottom, rgba(41, 255, 255, 0.8), rgba(10, 147, 160, 0.8)), url(../img/bubble-bg.jpg);
   background-size: cover;
   background-position: top;
   position: relative; }
@@ -273,3 +281,14 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh; }
+  .section-about p a:link, .section-about p a:visited {
+    background-color: #f7f7f7;
+    color: #777;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .section-about p a:hover, .section-about p a:active {
+    color: #ffa200;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.3); }

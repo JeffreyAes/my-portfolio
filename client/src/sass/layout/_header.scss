@@ -1,8 +1,10 @@
 .header {
     height: 85vh;
-    background-image: linear-gradient(to right bottom,
+    background-image: 
+    linear-gradient(to right bottom,
             rgba($color-secondary-light, 0.8),
-            rgba($color-secondary-dark, 0.8));
+            rgba($color-secondary-dark, 0.8)),
+            url(../img/bubble-bg.jpg);
     background-size: cover;
     background-position: top;
     position: relative;

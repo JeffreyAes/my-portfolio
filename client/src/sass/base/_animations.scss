@@ -3,11 +3,13 @@
     text-shadow: .5rem 1rem 2rem rgba($color-black, 0);
     transform: translate(6rem, 6rem);
     opacity: 0;
+    filter: blur(2);
 
     }
     100% {
     text-shadow: .5rem 1rem 2rem rgba($color-black, .5);
     transform: translate(0rem, 0rem);
     opacity: 1;
+    filter: blur(0);
     }
 }

@@ -37,8 +37,11 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
 
-    &--arrow {
+    &--arrow,
+    &:link,
+    &:focus {
         color: $color-secondary-dark;
+        font-size: $huge-font-size;
 
         &:hover {
             box-shadow: none;

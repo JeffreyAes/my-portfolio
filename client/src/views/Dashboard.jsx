@@ -1,52 +1,66 @@
 const Dashboard = (props) => {
 
     return (
-        <div className="home">
+        <div className="home" id="home">
             <div className="navigation">
 
             </div>
-            <header class="header">
-                <div class="header__text-box">
-                    <h1 class="heading-primary">
+            <header className="header" id="header">
+                <div className="header__text-box">
+                    <h1 className="heading-primary">
 
-                        <span class="heading-primary--main">Jeffrey Aeschliman</span>
-                        <span class="heading-primary--sub">Full Stack Developer</span>
+                        <span className="heading-primary--main">Jeffrey Aeschliman</span>
+                        <span className="heading-primary--sub">Full Stack Developer</span>
                     </h1>
 
-                    <a href="#section-about" class="btn btn--arrow">&nabla;</a>
+                    <a href="#section-about" className="btn btn--arrow">&nabla;</a>
                 </div>
 
             </header>
 
             <main>
                 <div className="section-about" >
-                    <div class="u-center-text u-margin-bottom-big" >
-                        <h2 class="heading-secondary">
-                            About me
+                    <div className="u-center-text u-margin-bottom-big" >
+                        <h2 className="heading-secondary">
+                            Who I am, and what I do
                         </h2>
                     </div>
 
-                    <div class="row" id="section-about">
-                        <div class="col-1-of-2">
-                            <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Fugit illum, minus at, a inventore, nihil facilis quo aliquam et sit minima
-                                incidunt eaque odio quasi sapiente id.
+                    <div className="row" id="section-about">
+                        <div className="col-1-of-2 border-round">
+                            <h3 className="heading-tertiary u-margin-bottom-small">Who I am</h3>
+                            <p className="paragraph">
+                                My name is  <a href="#home">Jeffrey Aeschliman</a>, I started my journey as a full stack
+                                web-developer at the <a href="https://www.codingdojo.com/">Coding Dojo</a>  which equipped me with the knowledge
+                                and skills to solve problems and build full featured projects. On my way
+                                I've discovered a passion for learning and sinking deep into new
+                                technologies. This love of learning new things brought me to tech, for its constant
+                                growth and change.
                             </p>
+                            <p className="paragraph">I am looking to hone my skills, contribute, and work and meet
+                                with talented people in the industry. Please reach out to me if you are interested working on a project and/or job opportunties.
+                            </p>
+                            <a href="#section-contact" className="btn-text">contact me</a>
                         </div>
-                        <div class="col-1-of-2">
+                        <div className="col-1-of-2 border-round">
 
-                            <h3 class="heading-tertiary u-margin-bottom-small">Live adventurous like you never have before.</h3>
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Fugit illum, minus at, a inventore, nihil facilis quo aliquam et sit minima
-                                incidunt.
+                            <h3 className="heading-tertiary u-margin-bottom-small">What I do.</h3>
+                            <p className="paragraph">
+                                I create full-stack applications from the ground up using multiple
+                                Languages, Frameworks, API's, and Libraries, Databases. With these technologies, I can create full CRUD applications that are stable,
+                                secure, and stylized for optimal user experience, keeping in consideration different devices and all. 
                             </p>
 
-                            <a href="#" class="btn-text">Learn more &rarr;</a>
+                            <p className="paragraph">
+                            In the pursuit of this I've learned how to avoid brevity, write clean/readable code, and overall implement good maintainable practices to avoid getting lost in spaghetti code. Below are a list of my skills.
+                            </p>
+                            <a href="#section-skills" className="btn-text">my skills</a>
                         </div>
                     </div>
+                </div>
+
+                <div className="section-skills">
+                    <h1>bruh</h1>
                 </div>
             </main>
         </div>
