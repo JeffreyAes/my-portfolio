@@ -1,6 +1,7 @@
 import About from "../components/About";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
+import Portfolio from "../components/Portfolio";
 import Skills from "../components/Skills";
 const Dashboard = (props) => {
 
@@ -10,7 +11,8 @@ const Dashboard = (props) => {
             <Header />
             <main>
                 <About />
-                <Skills /> 
+                <Skills />
+                <Portfolio />
             </main>
         </div>
     )
