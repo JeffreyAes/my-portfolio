@@ -40,7 +40,9 @@
 }
 
 .border-round {
-    border: 2px solid $color-primary;
+    border: .5rem solid $color-primary;
     padding: 5rem;
     border-radius: 5rem;
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
 }

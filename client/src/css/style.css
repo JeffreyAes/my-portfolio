@@ -30,6 +30,12 @@ ORDER: Base + typography > general layout + grid> page layout > components
     opacity: 1;
     filter: blur(0); } }
 
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -98,7 +104,7 @@ body {
       color: #ffb700; }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   text-transform: uppercase;
   font-weight: 300;
   display: inline-block;
@@ -122,6 +128,9 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase; }
+  .heading-tertiary--2 {
+    font-size: 4rem;
+    font-weight: 400; }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -159,9 +168,10 @@ body {
   margin-top: 10rem !important; }
 
 .border-round {
-  border: 2px solid #ffa200;
+  border: 0.5rem solid #ffa200;
   padding: 5rem;
-  border-radius: 5rem; }
+  border-radius: 5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -222,12 +232,48 @@ body {
 
 .arrow-button {
   border: solid #ffa200;
-  border-width: 0 1.5rem 1.5rem 0;
+  border-width: 0 1rem 1rem 0;
   display: inline-block;
-  padding: 3rem; }
+  padding: 3rem;
+  background-color: transparent; }
   .arrow-button__right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg); }
+  .arrow-button__left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg); }
+
+.portfolio {
+  position: relative;
+  display: flex;
+  justify-content: center; }
+  .portfolio__border {
+    width: 70%;
+    height: 60rem; }
+  .portfolio__carousel {
+    position: relative; }
+    .portfolio__carousel ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+  .portfolio__slide {
+    position: absolute;
+    inset: 0;
+    animation: appear 2s ease-out; }
+  .portfolio__btn-prev {
+    position: absolute;
+    top: 5rem;
+    left: 15rem;
+    cursor: pointer; }
+    .portfolio__btn-prev:hover, .portfolio__btn-prev:active {
+      filter: brightness(0.9); }
+  .portfolio__btn-next {
+    position: absolute;
+    top: 5rem;
+    right: 15rem;
+    cursor: pointer; }
+    .portfolio__btn-next:hover, .portfolio__btn-next:active {
+      filter: brightness(0.9); }
 
 .row {
   max-width: 114rem;

@@ -51,7 +51,7 @@ body {
 }
 
 .heading-secondary {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
     font-weight: 300;
     display: inline-block;
@@ -83,6 +83,12 @@ body {
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
+
+    &--2 {
+        font-size: $large-font-size;
+        font-weight: 400;
+        
+    }
 }
 
 .paragraph {

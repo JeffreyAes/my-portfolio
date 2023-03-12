@@ -1,0 +1,56 @@
+.portfolio {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__border {
+        width: 70%;
+        height: 60rem;
+
+    }
+
+    &__carousel {
+        position: relative;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    &__slide {
+        position: absolute;
+        inset: 0;
+        animation: appear 2s ease-out;
+    }
+
+
+    &__btn-prev {
+        position: absolute;
+        top: 5rem;
+        left: 15rem;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            filter: brightness(0.9);
+        }
+
+    }
+
+    &__btn-next {
+        position: absolute;
+        top: 5rem;
+        right: 15rem;
+        cursor: pointer;
+
+        &:hover,
+        &:active {
+            filter: brightness(0.9);
+        }
+
+    }
+
+
+}
