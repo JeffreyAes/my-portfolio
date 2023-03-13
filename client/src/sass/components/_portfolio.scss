@@ -4,13 +4,13 @@
     justify-content: center;
 
     &__border {
-        width: 70%;
-        height: 60rem;
+        width: 75%;
+        // height: 70rem;
 
     }
 
     &__carousel {
-        position: relative;
+        // position: relative;
 
         ul {
             list-style: none;
@@ -20,7 +20,7 @@
     }
 
     &__slide {
-        position: absolute;
+        // position: absolute;
         inset: 0;
         animation: appear 2s ease-out;
     }
@@ -28,8 +28,8 @@
 
     &__btn-prev {
         position: absolute;
-        top: 5rem;
-        left: 15rem;
+        top: 8rem;
+        left: 12rem;
         cursor: pointer;
 
         &:hover,
@@ -41,8 +41,8 @@
 
     &__btn-next {
         position: absolute;
-        top: 5rem;
-        right: 15rem;
+        top: 8rem;
+        right: 12rem;
         cursor: pointer;
 
         &:hover,
@@ -52,5 +52,78 @@
 
     }
 
+    &__container {
 
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+        align-items: end;
+    }
+
+    &__project-video {
+        min-height: 31.5rem;
+        min-width: 56rem;
+        border-radius: 1.5rem;
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        @include respond(tab-land) {
+            min-width: 20rem;
+            min-height: 10rem;
+            display: inline-block;
+        }
+    }
+
+    &__project-btn {
+        @include respond(tab-land) {
+            display: inline-block;
+        }
+
+        margin-right: 1rem;
+
+        &:visited,
+        &:link {
+            text-decoration: none;
+            color: $color-white;
+            background-color: $color-primary;
+            font-size: 2rem;
+            transition: all .2s;
+            padding: 1rem 2rem;
+            border-radius: .3rem;
+        }
+
+        &:hover {
+            color: $color-white;
+            text-shadow: 0 .5rem 1rem rgba($color-black, .2);
+            transform: translateY(-3px);
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+            transform: translateY(-1px);
+            text-shadow: 0 .5rem 1rem rgba($color-black, .2);
+        }
+    }
+
+
+
+    &__link--1 {
+
+        &:link,
+        &:visited {
+            background-color: $color-grey-light-1;
+            color: $color-grey-dark;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
 }
