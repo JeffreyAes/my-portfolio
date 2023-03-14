@@ -101,7 +101,7 @@ const Portfolio = (props) => {
                                         <h3 className="heading-tertiary heading-tertiary--2 u-center-text u-margin-bottom-small">
                                             Umbrella Man Website
                                         </h3>
-                                        <p className="paragraph u-center-text">This is a website I made for the industrial rock band "umbrella man" fans can access official information about the band, see news, subscribe to a newsletter, watch music videos, and buy merchandise on the store page.</p>
+                                        <p className="paragraph u-center-text">This is a website I made for the industrial rock band "umbrella man" fans can access official information about the band, see news, subscribe to a newsletter, watch music videos, and buy merchandise on the store page. This was my first opprutunity working with a client and I learned a lot from the experience.being communititive, dependable, and reliable are key factors to success.</p>
                                         <h3 className="heading-tertiary heading-tertiary--2 u-center-text u-margin-bottom-small">
                                             Technologies Used
                                         </h3>
