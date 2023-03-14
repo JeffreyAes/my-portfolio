@@ -26,6 +26,11 @@
             width: 15rem;
             transition: all .5s;
 
+            @include respond(phone) {
+                height: 10rem;
+                width: 10rem;
+            }
+
             &:hover {
                 transform: scale(1.5);
                 filter: drop-shadow(3rem 1rem 1rem $color-secondary-dark);

@@ -62,10 +62,9 @@
 
 .section-contact {
     padding: 10rem 15rem;
-    background-image: linear-gradient(
-        rgba($color-secondary, 0.6),
+    background-image: linear-gradient(rgba($color-secondary, 0.6),
             rgba($color-secondary-dark, 0.8));
-        background-color: $color-grey-light-1;
+    background-color: $color-grey-light-1;
 
     @include respond(tab-port) {
         padding: 10rem 0;
@@ -76,7 +75,7 @@
     background-image: linear-gradient(105deg,
             rgba($color-white, .9) 10%,
             rgba($color-white, .9) 50%,
-        rgba($color-primary, .9) 50%),
+            rgba($color-primary, .9) 50%),
         url(../img/bubble-bg.jpg);
     background-size: cover;
     border-radius: 3px;
@@ -84,10 +83,10 @@
 
 
     @include respond(tab-land) {
-        background-image: linear-gradient(-105deg,
-                rgba($color-white, .9) 0%,
+        background-image: linear-gradient(105deg,
+                rgba($color-white, .9) 10%,
                 rgba($color-white, .9) 65%,
-                transparent 65%),
+                rgba($color-primary, .9) 50%),
             url(../img/bubble-bg.jpg);
         background-size: cover;
     }

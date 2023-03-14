@@ -17,7 +17,7 @@ const Footer = (props) => {
             </div>
             <div class="col-1-of-2">
                 <p class="footer__copyright u-center-text">
-                © Copyright 2023. Made by  <a href="home" className="footer__link">Jeffrey Aeschliman</a>
+                © Copyright 2023. Made by  <a href="#home" className="footer__link">Jeffrey Aeschliman</a>
                 </p>
             </div>
         </div>
