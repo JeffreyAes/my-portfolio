@@ -58,6 +58,9 @@
         justify-content: space-between;
         margin-top: 3rem;
         align-items: end;
+        @include respond(tab-land) {
+            display: block;
+          }
     }
 
     &__project-video {
@@ -69,16 +72,15 @@
         @include respond(tab-land) {
             min-width: 20rem;
             min-height: 10rem;
-            display: inline-block;
+            // display: inline-block;
         }
     }
 
     &__project-btn {
         @include respond(tab-land) {
             display: inline-block;
-        }
 
-        margin-right: 1rem;
+        }
 
         &:visited,
         &:link {

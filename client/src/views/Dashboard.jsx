@@ -1,4 +1,5 @@
 import About from "../components/About";
+import Contact from "../components/Contact";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
 import Portfolio from "../components/Portfolio";
@@ -13,6 +14,7 @@ const Dashboard = (props) => {
                 <About />
                 <Skills />
                 <Portfolio />
+                <Contact />
             </main>
         </div>
     )

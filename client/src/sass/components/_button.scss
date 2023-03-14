@@ -37,6 +37,20 @@
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
 
+    &--orange {
+        background-color: $color-primary;
+        color: $color-white;
+        border-radius: 0;
+        // transform: skewY(-7deg);
+        font-size: $default-font-size;
+        
+
+        &::after {
+            background-color: $color-primary;
+        }
+
+    }
+
     &--arrow,
     &:link,
     &:focus {
@@ -56,6 +70,8 @@
             filter: brightness(0.8);
         }
     }
+
+    
 }
 
 .btn-text {
@@ -105,3 +121,4 @@
 
 
 }
+

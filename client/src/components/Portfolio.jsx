@@ -44,9 +44,10 @@ const Portfolio = (props) => {
                                         </h3>
                                         <p className='paragraph u-center-text'>JavaScript - React - Node.js - Mongodb - Mongoose - Material UI - Express</p>
                                         <div className="portfolio__container">
-                                            <iframe className="portfolio__project-video " src="https://www.youtube.com/embed/zscwOpQVqBk" title="Jobbin&#39; Demo"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"></iframe>
-                                            <a className="portfolio__project-btn" href="https://github.com/JeffreyAes/unity_project">Source Code</a>
-                                    </div>
+                                            <iframe className="portfolio__project-video " src="https://www.youtube.com/embed/zscwOpQVqBk" title="Jobbin&#39; Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"></iframe>
+
+                                        <a className="portfolio__project-btn" href="https://github.com/JeffreyAes/unity_project">Source Code</a>
+                                        </div>
                                     </li>
                                     : ""}
                                 {active === 1 ?
@@ -70,7 +71,7 @@ const Portfolio = (props) => {
                                         <h3 className="heading-tertiary heading-tertiary--2 u-center-text u-margin-bottom-small">
                                             Umbrella Man Website
                                         </h3>
-                                        <p className="paragraph u-center-text">This is a website I made for the industrial rock band "umbrella man" fans can access official information about the band, see news, subscribe to a newsletter, watch music videos, and buy merchandise on the store page. Designed by the frontman Ray Lindsley himself.</p>
+                                        <p className="paragraph u-center-text">This is a website I made for the industrial rock band "umbrella man" fans can access official information about the band, see news, subscribe to a newsletter, watch music videos, and buy merchandise on the store page.</p>
                                         <h3 className="heading-tertiary heading-tertiary--2 u-center-text u-margin-bottom-small">
                                             Technologies Used
                                         </h3>

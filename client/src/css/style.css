@@ -199,6 +199,14 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
+.btn--orange {
+  background-color: #ffa200;
+  color: #fff;
+  border-radius: 0;
+  font-size: 1.6rem; }
+  .btn--orange::after {
+    background-color: #ffa200; }
+
 .btn--arrow, .btn:link, .btn:focus {
   color: #0a93a0;
   font-size: 6rem;
@@ -243,6 +251,89 @@ body {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg); }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all .3s; }
+  @media only screen and (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #0dbfcc; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #ec9508; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+  @media only screen and (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid #ffa200;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.4rem; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffa200;
+    opacity: 0;
+    transition: opacity .2s; }
+
+.form__radio-input:checked + .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
 .portfolio {
   position: relative;
   display: flex;
@@ -275,6 +366,9 @@ body {
     justify-content: space-between;
     margin-top: 3rem;
     align-items: end; }
+    @media only screen and (max-width: 75em) {
+      .portfolio__container {
+        display: block; } }
   .portfolio__project-video {
     min-height: 31.5rem;
     min-width: 56rem;
@@ -283,29 +377,26 @@ body {
     @media only screen and (max-width: 75em) {
       .portfolio__project-video {
         min-width: 20rem;
-        min-height: 10rem;
-        display: inline-block; } }
-  .portfolio__project-btn {
-    margin-right: 1rem; }
-    @media only screen and (max-width: 75em) {
-      .portfolio__project-btn {
-        display: inline-block; } }
-    .portfolio__project-btn:visited, .portfolio__project-btn:link {
-      text-decoration: none;
-      color: #fff;
-      background-color: #ffa200;
-      font-size: 2rem;
-      transition: all .2s;
-      padding: 1rem 2rem;
-      border-radius: .3rem; }
-    .portfolio__project-btn:hover {
-      color: #fff;
-      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-      transform: translateY(-3px); }
-    .portfolio__project-btn:active, .portfolio__project-btn:focus {
-      outline: none;
-      transform: translateY(-1px);
-      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+        min-height: 10rem; } }
+  @media only screen and (max-width: 75em) {
+    .portfolio__project-btn {
+      display: inline-block; } }
+  .portfolio__project-btn:visited, .portfolio__project-btn:link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffa200;
+    font-size: 2rem;
+    transition: all .2s;
+    padding: 1rem 2rem;
+    border-radius: .3rem; }
+  .portfolio__project-btn:hover {
+    color: #fff;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); }
+  .portfolio__project-btn:active, .portfolio__project-btn:focus {
+    outline: none;
+    transform: translateY(-1px);
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .portfolio__link--1:link, .portfolio__link--1:visited {
     background-color: #f7f7f7;
     color: #777;
@@ -517,8 +608,38 @@ body {
 
 .section-portfolio {
   background-color: #f7f7f7;
-  padding: 25rem 0 15rem 0;
+  padding: 25rem 0 25rem 0;
   margin-top: -12rem; }
   @media only screen and (max-width: 56.25em) {
     .section-portfolio {
       padding: 20rem 0 10rem 0; } }
+
+.section-contact {
+  padding: 10rem 15rem;
+  background-image: linear-gradient(rgba(13, 191, 204, 0.6), rgba(10, 147, 160, 0.8));
+  background-color: #f7f7f7; }
+  @media only screen and (max-width: 56.25em) {
+    .section-contact {
+      padding: 10rem 0; } }
+
+.contact {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 10%, rgba(255, 255, 255, 0.9) 50%, rgba(255, 162, 0, 0.9) 50%), url(../img/bubble-bg.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3); }
+  @media only screen and (max-width: 75em) {
+    .contact {
+      background-image: linear-gradient(-105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/bubble-bg.jpg);
+      background-size: cover; } }
+  @media only screen and (max-width: 56.25em) {
+    .contact {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/bubble-bg.jpg); } }
+  .contact__form {
+    width: 50%;
+    padding: 6rem; }
+    @media only screen and (max-width: 75em) {
+      .contact__form {
+        width: 65%; } }
+    @media only screen and (max-width: 56.25em) {
+      .contact__form {
+        width: 100%; } }
