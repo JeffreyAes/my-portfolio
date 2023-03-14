@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Portfolio = (props) => {
     const [active, setActive] = useState(0)
@@ -6,6 +6,7 @@ const Portfolio = (props) => {
         setActive(active + 1)
         if (active >= 2) {
             setActive(0)
+
         }
     }
 
@@ -15,6 +16,36 @@ const Portfolio = (props) => {
             setActive(2)
         }
     }
+
+    const handleSelect = (i) => {
+        setActive(i)
+    }
+
+    useEffect(() => {
+        const element0 = document.getElementById(0);
+        const element1 = document.getElementById(1);
+        const element2 = document.getElementById(2);
+        console.log("bruh")
+        if(active===0) {
+            element0.classList.add('portfolio__select--focus'); 
+        }
+        else {
+            element0.classList.remove('portfolio__select--focus'); 
+        }
+        if(active===1) {
+            element1.classList.add('portfolio__select--focus'); 
+        }
+        else {
+            element1.classList.remove('portfolio__select--focus'); 
+        }
+        if(active===2) {
+            element2.classList.add('portfolio__select--focus'); 
+        }
+        else {
+            element2.classList.remove('portfolio__select--focus'); 
+        }
+    })
+
 
 
     return (
@@ -26,8 +57,7 @@ const Portfolio = (props) => {
                 </h2>
             </div>
             <div className="portfolio">
-                <button onClick={handleClickminus} className="arrow-button arrow-button__left portfolio__btn-prev " data-carousel-button="prev" ></button>
-                <button onClick={handleClickPlus} className="arrow-button arrow-button__right portfolio__btn-next" data-carousel-button="next" ></button>
+
                 <div className="portfolio__border border-round">
 
                     <section aria-label="Newest Projects">
@@ -46,7 +76,7 @@ const Portfolio = (props) => {
                                         <div className="portfolio__container">
                                             <iframe className="portfolio__project-video " src="https://www.youtube.com/embed/zscwOpQVqBk" title="Jobbin&#39; Demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"></iframe>
 
-                                        <a className="portfolio__project-btn" href="https://github.com/JeffreyAes/unity_project">Source Code</a>
+                                            <a className="portfolio__project-btn" href="https://github.com/JeffreyAes/unity_project">Source Code</a>
                                         </div>
                                     </li>
                                     : ""}
@@ -80,8 +110,22 @@ const Portfolio = (props) => {
                                     : ""}
                             </ul>
                         </div>
+
                     </section>
+
                 </div>
+
+            </div>
+            <div className="portfolio__btn">
+
+                <button onClick={handleClickminus} className="arrow-button arrow-button__left portfolio__btn-prev " data-carousel-button="prev" ></button>
+                <div className="">
+
+                    <button className="portfolio__select" id='0' onClick={() => { handleSelect(0) }}></button>
+                    <button className="portfolio__select" id='1' onClick={() => { handleSelect(1) }}></button>
+                    <button className="portfolio__select" id='2' onClick={() => { handleSelect(2) }}></button>
+                </div>
+                <button onClick={handleClickPlus} className="arrow-button arrow-button__right portfolio__btn-next" data-carousel-button="next" ></button>
             </div>
         </section>
     )

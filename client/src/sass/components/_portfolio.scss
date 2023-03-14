@@ -1,11 +1,16 @@
 .portfolio {
-    position: relative;
+    // position: relative;
     display: flex;
     justify-content: center;
 
     &__border {
         width: 75%;
         // height: 70rem;
+        @include respond(phone) {
+            width: 98%;
+            padding-left: .3rem;
+            padding-right: .3rem;
+        }
 
     }
 
@@ -24,12 +29,19 @@
         inset: 0;
         animation: appear 2s ease-out;
     }
+    &__btn {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        align-items: center;
+    }
 
 
     &__btn-prev {
-        position: absolute;
-        top: 8rem;
-        left: 12rem;
+        // position: absolute;
+        // top: 8rem;
+        // left: 12rem;
+        margin: 3rem;
         cursor: pointer;
 
         &:hover,
@@ -40,14 +52,31 @@
     }
 
     &__btn-next {
-        position: absolute;
-        top: 8rem;
-        right: 12rem;
+        // position: absolute;
+        // top: 8rem;
+        // right: 12rem;
+        margin: 3rem;
+
         cursor: pointer;
 
         &:hover,
         &:active {
             filter: brightness(0.9);
+        }
+
+    }
+
+    &__select {
+        height: 2rem;
+        width: 2rem;
+        background-color: $color-grey-dark-2;
+        border-radius: 50%;
+        display: inline-block;
+        border: none;
+        margin: .5rem;
+
+        &--focus {
+            background-color: $color-primary;
         }
 
     }
@@ -72,6 +101,11 @@
         @include respond(tab-land) {
             min-width: 20rem;
             min-height: 10rem;
+            // display: inline-block;
+        }
+        @include respond(phone) {
+            min-width: 10rem;
+            min-height: 5rem;
             // display: inline-block;
         }
     }
