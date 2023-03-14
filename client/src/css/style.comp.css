@@ -396,25 +396,27 @@ body {
       .portfolio__project-video {
         min-width: 10rem;
         min-height: 5rem; } }
-  @media only screen and (max-width: 75em) {
-    .portfolio__project-btn {
-      display: inline-block; } }
-  .portfolio__project-btn:visited, .portfolio__project-btn:link {
-    text-decoration: none;
-    color: #fff;
-    background-color: #ffa200;
-    font-size: 2rem;
-    transition: all .2s;
-    padding: 1rem 2rem;
-    border-radius: .3rem; }
-  .portfolio__project-btn:hover {
-    color: #fff;
-    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px); }
-  .portfolio__project-btn:active, .portfolio__project-btn:focus {
-    outline: none;
-    transform: translateY(-1px);
-    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .portfolio__project-btn {
+    align-self: end; }
+    @media only screen and (max-width: 75em) {
+      .portfolio__project-btn {
+        display: inline-block; } }
+    .portfolio__project-btn:visited, .portfolio__project-btn:link {
+      text-decoration: none;
+      color: #fff;
+      background-color: #ffa200;
+      font-size: 2rem;
+      transition: all .2s;
+      padding: 1rem 2rem;
+      border-radius: .3rem; }
+    .portfolio__project-btn:hover {
+      color: #fff;
+      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+      transform: translateY(-3px); }
+    .portfolio__project-btn:active, .portfolio__project-btn:focus {
+      outline: none;
+      transform: translateY(-1px);
+      text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
   .portfolio__link--1:link, .portfolio__link--1:visited {
     background-color: #f7f7f7;
     color: #777;
