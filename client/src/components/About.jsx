@@ -16,7 +16,7 @@ const About = (props) => {
                         and skills to solve problems and build full featured projects. On my way
                         I've discovered a passion for learning and sinking deep into new
                         technologies. This love of learning new things brought me to tech, for its constant
-                        growth and change.
+                        growth and change. I also have a hobby of making video games! :)
                     </p>
                     <p className="paragraph">I am looking to hone my skills, contribute, and work and meet
                         with talented people in the industry. Please reach out to me if you are interested working on a project and/or job opportunties.
@@ -29,9 +29,9 @@ const About = (props) => {
                     <p className="paragraph">
                         I create full-stack applications from the ground up using multiple
                         Languages, Frameworks, API's, and Libraries, Databases. With these technologies, I can create full CRUD applications that are stable,
-                        secure, and stylized for optimal user experience, keeping in consideration different devices and all.
+                        secure, and stylized for optimal user experience, keeping in consideration different devices and all. I also have experience developing games in Unity, which I show case in my portfolio section below!
                     </p>
-
+                    
                     <p className="paragraph">
                         In the pursuit of this I've learned how to avoid brevity, write clean/readable code, and overall implement good maintainable practices to avoid getting lost in spaghetti code. Below are a list of my skills.
                     </p>
