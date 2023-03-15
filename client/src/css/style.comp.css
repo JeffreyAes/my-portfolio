@@ -338,10 +338,11 @@ body {
   display: flex;
   justify-content: center; }
   .portfolio__border {
-    width: 75%; }
-    @media only screen and (max-width: 37.5em) {
+    width: 75%;
+    min-height: 90vh; }
+    @media only screen and (max-width: 26.5em) {
       .portfolio__border {
-        width: 98%;
+        width: 100vw;
         padding-left: .3rem;
         padding-right: .3rem; } }
   .portfolio__carousel ul {
@@ -379,23 +380,25 @@ body {
   .portfolio__container {
     display: flex;
     justify-content: space-between;
-    margin-top: 3rem; }
+    margin-top: 5rem;
+    align-items: end;
+    text-align: center; }
     @media only screen and (max-width: 75em) {
       .portfolio__container {
         display: block; } }
   .portfolio__project-video {
-    min-height: 31.5rem;
-    min-width: 56rem;
+    min-height: 25rem;
+    min-width: 50rem;
     border-radius: 1.5rem;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 75em) {
       .portfolio__project-video {
-        min-width: 20rem;
-        min-height: 10rem; } }
+        max-width: 30.6rem;
+        max-height: 15rem; } }
     @media only screen and (max-width: 37.5em) {
       .portfolio__project-video {
-        min-width: 10rem;
-        min-height: 5rem; } }
+        min-width: 15rem;
+        min-height: 10rem; } }
   .portfolio__project-btn {
     align-self: end; }
     @media only screen and (max-width: 75em) {
@@ -459,15 +462,25 @@ body {
   .footer__item {
     display: inline-block; }
     .footer__item:not(:last-child) {
-      margin-right: 1.5rem; }
+      margin-right: 2.5rem; }
   .footer__link:link, .footer__link:visited {
+    color: #f7f7f7;
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .2s; }
+  .footer__link:hover, .footer__link:active {
+    color: #ffa200;
+    transform: rotate(5deg) scale(1.3); }
+  .footer__link--name:link, .footer__link--name:visited {
     color: #f7f7f7;
     background-color: #333;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
     transition: all .2s; }
-  .footer__link:hover, .footer__link:active {
+  .footer__link--name:hover, .footer__link--name:active {
     color: #ffa200;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
     transform: rotate(5deg) scale(1.3); }

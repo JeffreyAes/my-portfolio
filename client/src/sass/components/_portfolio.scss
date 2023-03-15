@@ -5,9 +5,11 @@
 
     &__border {
         width: 75%;
+        min-height: 90vh;
+
         // height: 70rem;
-        @include respond(phone) {
-            width: 98%;
+        @include respond(smallPhone) {
+            width: 100vw;
             padding-left: .3rem;
             padding-right: .3rem;
         }
@@ -29,6 +31,7 @@
         inset: 0;
         animation: appear 2s ease-out;
     }
+
     &__btn {
         display: flex;
         justify-content: space-around;
@@ -85,32 +88,42 @@
 
         display: flex;
         justify-content: space-between;
-        margin-top: 3rem;
+        margin-top: 5rem;
+        align-items: end;
+        text-align: center;
+
         @include respond(tab-land) {
             display: block;
-          }
+        }
     }
 
     &__project-video {
-        min-height: 31.5rem;
-        min-width: 56rem;
+        min-height: 25rem;
+        min-width: 50rem;
         border-radius: 1.5rem;
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
         @include respond(tab-land) {
-            min-width: 20rem;
+            max-width: 30.6rem;
+            max-height: 15rem;
+            // display: inline-block;
+        }
+
+        @include respond(phone) {
+            min-width: 15rem;
             min-height: 10rem;
             // display: inline-block;
         }
-        @include respond(phone) {
-            min-width: 10rem;
-            min-height: 5rem;
-            // display: inline-block;
-        }
+        // @include respond(smallPhone) {
+        //     max-width: 10rem;
+        //     max-height: 5rem;
+        //     // display: inline-block;
+        // }
     }
 
     &__project-btn {
         align-self: end;
+
         @include respond(tab-land) {
             display: inline-block;
 
